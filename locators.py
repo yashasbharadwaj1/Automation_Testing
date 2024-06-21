@@ -19,7 +19,7 @@ driver.find_element(By.NAME, "email").send_keys("hello@gmail.com")
 driver.find_element(By.ID, "exampleInputPassword1").send_keys("123456")
 driver.find_element(By.ID, "exampleCheck1").click()
 
-# Xpath syntax - //tagname[@attribute='value']->
+# Xpath syntax - //tagname[@attribute='value']
 driver.find_element(By.XPATH,
 "//input[@type='submit']").click()
 
