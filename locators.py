@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select 
 
 driver = webdriver.Chrome()
 driver.get("https://rahulshettyacademy.com/angularpractice/")
@@ -18,6 +19,19 @@ Name,LinkText
 driver.find_element(By.NAME, "email").send_keys("hello@gmail.com")
 driver.find_element(By.ID, "exampleInputPassword1").send_keys("123456")
 driver.find_element(By.ID, "exampleCheck1").click()
+
+#Static DropDown 
+# if u see select tag dropdown go and use Select class
+dropdown = Select(driver.find_element(By.ID, "exampleFormControlSelect1"))
+
+dropdown.select_by_visible_text("Female") 
+
+#selects first 1
+dropdown.select_by_index(0) 
+
+# in case u have value attribute
+#dropdown.select_by_value()
+
 
 # Xpath syntax - //tagname[@attribute='value']
 driver.find_element(By.XPATH,
