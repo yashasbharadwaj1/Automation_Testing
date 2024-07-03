@@ -1,6 +1,6 @@
 import pytest
 
-@pytest.fixture() 
+@pytest.fixture(scope='class') 
 def setup():
     # runs before tests execution
     print("I will be executing first") 
