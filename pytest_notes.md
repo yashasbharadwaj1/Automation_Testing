@@ -47,4 +47,10 @@ for the fixtures to be available across all the tests
 u need to write them in conftest.py 
 
 
+@pytest.mark.usefixtures("setup") 
+instaed of passing fixtures names to every test function we can make use of decorator 
+@pytest.mark.usefixtures("setup") to run for the entire class 
+
+@pytest.fixture(scope='class') 
+class: The fixture is invoked once per class of tests.
 
