@@ -16,3 +16,21 @@ py.test -m smoke
 you can skip tests with @pytest.mark.skip  
 
 @pytest.mark.xfail is used to mark tests that are known to fail due to a bug or unimplemented feature. This helps in tracking such tests without cluttering the test report with failures you're already aware of.
+
+
+@pytest.fixture is a decorator in the pytest testing framework that defines a fixture function. 
+Fixtures provide a way to set up some initial state or dependency that your tests need. They are useful for code reuse and managing setup and teardown logic in a clean and modular way.
+
+Key Points
+Setup and Teardown: Fixtures can handle setup and teardown operations, which are actions that need to be performed before and after a test runs.
+
+Reusability: Fixtures allow you to define common setup logic that can be reused across multiple tests, reducing code duplication.
+
+Dependency Injection: Fixtures are injected into test functions via their function arguments. This makes it easy to share state and dependencies between tests.
+
+Scope: Fixtures can have different scopes (function, class, module, session) which control how often the fixture is invoked:
+
+function: Default scope, the fixture is invoked for each test function.
+class: The fixture is invoked once per class of tests.
+module: The fixture is invoked once per module.
+session: The fixture is invoked once per test session.
