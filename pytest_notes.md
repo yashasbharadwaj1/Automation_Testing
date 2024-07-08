@@ -54,3 +54,11 @@ instaed of passing fixtures names to every test function we can make use of deco
 @pytest.fixture(scope='class') 
 class: The fixture is invoked once per class of tests.
 
+to generate html report for all tests 
+
+pip install pytest-html 
+
+then run the below command 
+
+py.test --html=report.html 
+
