@@ -5,8 +5,16 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 
+# implicit wait -- works as a global timeout
+driver.implicitly_wait(5)
+
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 
+time.sleep(2)
+
+# Implicit wait does 
+# not work on find_elements 
+# this is the only excpetion
 
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
 
@@ -30,4 +38,6 @@ driver.find_element(By.CSS_SELECTOR, ".promoBtn").click()
 
 code_applied_msg = driver.find_element(By.CLASS_NAME, "promoInfo").text
 
-print(code_applied_msg)
+#print(code_applied_msg) 
+
+assert code_applied_msg == "Code applied ..!"
