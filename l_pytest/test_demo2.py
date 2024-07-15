@@ -18,4 +18,5 @@ def test_CreditCard_2():
 # parametirized fixture argument    
 # this test runs 3 times as 3 params are passed to it
 def test_crossBrowser(crossBrowser):
-    print(crossBrowser)
+    print(crossBrowser) 
+    print(crossBrowser[0])
